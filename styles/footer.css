@@ -1,0 +1,109 @@
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 20px 20px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.brand-section .logo h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.brand-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.column-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin-bottom: 12px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 14px;
+}
+
+.links-list li:hover {
+  color: #007bff;
+}
+
+.help-note {
+  font-size: 12px;
+  color: #888;
+  margin-top: 16px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.policies {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.policies span {
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.policies span:hover {
+  color: #007bff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .policies {
+    gap: 20px;
+    justify-content: center;
+  }
+}
