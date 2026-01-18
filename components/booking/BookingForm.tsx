@@ -123,32 +123,32 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
   };
 
   return (
-    <div className="bg-white p-6 shadow-md rounded-lg">
-      <h2 className="text-xl font-bold text-black mb-4">Contact Detail</h2>
+    <div className="bg-white p-5 sm:p-6 shadow-lg border border-gray-200 rounded-xl">
+      <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-5 pb-3 border-b border-gray-200">Contact Detail</h2>
       
       <form onSubmit={handleSubmit}>
         {/* Contact Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="font-bold text-black">First Name</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">First Name</label>
             <input 
               type="text" 
               name="firstName"
               value={formData.firstName}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors.firstName ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors.firstName ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors.firstName && <p className="text-red-500 text-sm mt-1">{formErrors.firstName}</p>}
           </div>
           <div>
-            <label className="font-bold text-black">Last Name</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">Last Name</label>
             <input 
               type="text" 
               name="lastName"
               value={formData.lastName}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors.lastName ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors.lastName ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors.lastName && <p className="text-red-500 text-sm mt-1">{formErrors.lastName}</p>}
@@ -157,25 +157,25 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div>
-            <label className="font-bold text-black">Email</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">Email</label>
             <input 
               type="email" 
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors.email ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors.email ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors.email && <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>}
           </div>
           <div>
-            <label className="font-bold text-black">Phone Number</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">Phone Number</label>
             <input 
               type="tel" 
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors.phoneNumber ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors.phoneNumber ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors.phoneNumber && <p className="text-red-500 text-sm mt-1">{formErrors.phoneNumber}</p>}
@@ -183,16 +183,16 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
         </div>
 
         {/* Payment Information */}
-        <h2 className="text-xl font-bold text-black mt-6 mb-4">Pay with</h2>
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-6 mb-4 pt-4 border-t border-gray-200">Pay with</h2>
         <div>
-          <label className="font-bold text-black">Card Number</label>
+          <label className="font-semibold text-gray-700 block mb-1.5">Card Number</label>
           <input 
             type="text" 
             name="cardNumber"
             value={formData.cardNumber}
             onChange={handleInputChange}
             placeholder="1234 5678 9012 3456"
-            className={`border p-2 w-full mt-2 rounded ${formErrors.cardNumber ? 'border-red-500' : 'border-gray-300'}`}
+            className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors.cardNumber ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
             disabled={loading}
           />
           {formErrors.cardNumber && <p className="text-red-500 text-sm mt-1">{formErrors.cardNumber}</p>}
@@ -200,27 +200,27 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div>
-            <label className="font-bold text-black">Expiration Date</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">Expiration Date</label>
             <input 
               type="text" 
               name="expirationDate"
               value={formData.expirationDate}
               onChange={handleInputChange}
               placeholder="MM/YY"
-              className={`border p-2 w-full mt-2 rounded ${formErrors.expirationDate ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors.expirationDate ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors.expirationDate && <p className="text-red-500 text-sm mt-1">{formErrors.expirationDate}</p>}
           </div>
           <div>
-            <label className="font-bold text-black">CVV</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">CVV</label>
             <input 
               type="text" 
               name="cvv"
               value={formData.cvv}
               onChange={handleInputChange}
               placeholder="123"
-              className={`border p-2 w-full mt-2 rounded ${formErrors.cvv ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors.cvv ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors.cvv && <p className="text-red-500 text-sm mt-1">{formErrors.cvv}</p>}
@@ -228,15 +228,15 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
         </div>
 
         {/* Billing Address */}
-        <h2 className="text-xl font-bold text-black mt-6 mb-4">Billing Address</h2>
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-6 mb-4 pt-4 border-t border-gray-200">Billing Address</h2>
         <div>
-          <label className="font-bold text-black">Street Address</label>
+          <label className="font-semibold text-gray-700 block mb-1.5">Street Address</label>
           <input 
             type="text" 
             name="billing.street"
             value={formData.billingAddress.street}
             onChange={handleInputChange}
-            className={`border p-2 w-full mt-2 rounded ${formErrors["billing.street"] ? 'border-red-500' : 'border-gray-300'}`}
+            className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors["billing.street"] ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
             disabled={loading}
           />
           {formErrors["billing.street"] && <p className="text-red-500 text-sm mt-1">{formErrors["billing.street"]}</p>}
@@ -244,25 +244,25 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div>
-            <label className="font-bold text-black">City</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">City</label>
             <input 
               type="text" 
               name="billing.city"
               value={formData.billingAddress.city}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors["billing.city"] ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors["billing.city"] ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors["billing.city"] && <p className="text-red-500 text-sm mt-1">{formErrors["billing.city"]}</p>}
           </div>
           <div>
-            <label className="font-bold text-black">State</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">State</label>
             <input 
               type="text" 
               name="billing.state"
               value={formData.billingAddress.state}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors["billing.state"] ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors["billing.state"] ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors["billing.state"] && <p className="text-red-500 text-sm mt-1">{formErrors["billing.state"]}</p>}
@@ -271,25 +271,25 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div>
-            <label className="font-bold text-black">Zip Code</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">Zip Code</label>
             <input 
               type="text" 
               name="billing.zipCode"
               value={formData.billingAddress.zipCode}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors["billing.zipCode"] ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors["billing.zipCode"] ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors["billing.zipCode"] && <p className="text-red-500 text-sm mt-1">{formErrors["billing.zipCode"]}</p>}
           </div>
           <div>
-            <label className="font-bold text-black">Country</label>
+            <label className="font-semibold text-gray-700 block mb-1.5">Country</label>
             <input 
               type="text" 
               name="billing.country"
               value={formData.billingAddress.country}
               onChange={handleInputChange}
-              className={`border p-2 w-full mt-2 rounded ${formErrors["billing.country"] ? 'border-red-500' : 'border-gray-300'}`}
+              className={`border p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${formErrors["billing.country"] ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
               disabled={loading}
             />
             {formErrors["billing.country"] && <p className="text-red-500 text-sm mt-1">{formErrors["billing.country"]}</p>}
@@ -298,13 +298,13 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
 
         {/* Special Requests */}
         <div className="mt-4">
-          <label className="font-bold text-black">Special Requests (Optional)</label>
+          <label className="font-semibold text-gray-700 block mb-1.5">Special Requests (Optional)</label>
           <textarea
             name="specialRequests"
             value={formData.specialRequests}
             onChange={handleInputChange}
             rows={3}
-            className="border border-gray-300 p-2 w-full mt-2 rounded"
+            className="border border-gray-300 p-2.5 w-full mt-1 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"
             placeholder="Any special requests or notes for your stay..."
             disabled={loading}
           />
@@ -321,10 +321,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit, loading, error }) =
         <button 
           type="submit" 
           disabled={loading}
-          className={`mt-6 py-3 px-4 rounded-md w-full font-medium transition-colors duration-200 ${
+          className={`mt-6 py-3.5 px-6 rounded-lg w-full font-semibold transition-all duration-200 shadow-md ${
             loading 
-              ? 'bg-gray-400 text-gray-700 cursor-not-allowed' 
-              : 'bg-green-500 hover:bg-green-600 text-white'
+              ? 'bg-gray-400 text-gray-700 cursor-not-allowed shadow-sm' 
+              : 'bg-green-600 hover:bg-green-700 active:bg-green-800 text-white hover:shadow-lg transform hover:-translate-y-0.5'
           }`}
         >
           {loading ? (

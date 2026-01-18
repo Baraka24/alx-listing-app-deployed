@@ -171,17 +171,17 @@ export default function BookingPage() {
   };
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-6">Complete Your Booking</h1>
+    <div className="container mx-auto p-4 sm:p-6">
+      <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Complete Your Booking</h1>
       
       {error && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 text-sm sm:text-base">
           {error}
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <div className="order-2 lg:order-1">
           <BookingForm 
             onSubmit={handleBookingSubmit} 
             loading={bookingLoading}
@@ -189,7 +189,9 @@ export default function BookingPage() {
           />
           <CancellationPolicy />
         </div>
-        <OrderSummary bookingDetails={bookingDetails} />
+        <div className="order-1 lg:order-2">
+          <OrderSummary bookingDetails={bookingDetails} />
+        </div>
       </div>
     </div>
   );
